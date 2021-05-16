@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+@import "variables";
+@import "~compass-mixins/lib/compass";
+@import "~bootstrap/scss/bootstrap";
+@import '~select2/dist/css/select2.css';
+@import "fonts";
+@import "functions";
+
+/* === Template mixins === */
+@import "mixins/buttons";
+@import "mixins/misc";
+@import "mixins/color-functions";
+@import "mixins/cards";
+@import "mixins/blockqoute";
+
+/* === Core Styles === */
+@import "background";
+@import "typography";
+@import "reset";
+@import "misc";
+@import "utilities";
+@import "dashboard";
+
+/* === Components === */
+@import "components/checkbox-radio";
+@import "components/icons";
+@import "components/tables";
+@import "components/buttons";
+@import "components/breadcrumbs";
+@import "components/cards";
+@import "components/dropdowns";
+
+@import "auth";
+
+/* === Layout === */
+@import "navbar";
+@import "sidebar";
+@import "footer";
+@import "layout";
+@import "settings-panel";
