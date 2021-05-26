@@ -187,6 +187,12 @@ class CargoController extends Controller
 
         return view('cargoes.departure', compact('cargoes'));
     }
+    public function history()
+    {
+        $cargoes = Cargo::where('status', App::CARGO_STATUS_DEPARTURED)->orderBy('id', 'desc')->get();
+
+        return view('cargoes.history', compact('cargoes'));
+    }
 
     public function terminal()
     {

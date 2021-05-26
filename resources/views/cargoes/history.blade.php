@@ -6,9 +6,6 @@
             {{ session()->get('success') }}
         </div>
     @endif
-{{--    <button type="button" class="btn btn-primary mb-3" style="float: right;"--}}
-{{--            onclick="window.location='{{ url("cargoes/create") }}'">Pridėti--}}
-{{--    </button>--}}
 
     <div class="clearfix"></div>
 
@@ -26,6 +23,7 @@
                             <th> Krovinys</th>
                             <th> Kiekis</th>
                             <th> Svoris</th>
+                            <th> Išvykimo data</th>
                             <th> Veiksmai
                             </th>
                         </tr>
@@ -40,15 +38,14 @@
                                 <td>{{ $cargo->name }}</td>
                                 <td>{{ $cargo->amount }}</td>
                                 <td>{{ $cargo->weight }}</td>
+                                <td>{{ date('Y-m-d', strtotime($cargo->updated_at))}}</td>
                                 <td class="actions">
                                     <button class="btn btn-primary" data-id="{{ $cargo->id }}" data-toggle="modal" data-target="#cargoDetails">
                                         <i class="mdi mdi-eye"></i>
                                     </button>
-
                                     <button class="btn btn-success" data-id="{{ $cargo->id }}" data-toggle="modal" data-target="#cargoComment">
                                         <i class="mdi mdi-message-plus"></i>
                                     </button>
-
 
                                 </td>
                             </tr>

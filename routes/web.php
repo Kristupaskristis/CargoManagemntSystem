@@ -15,6 +15,7 @@ use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\CargoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FilesController;
+use App\Http\Controllers\ClientController;
 
 Route::get('/', function () {
     return view('auth/login');
@@ -30,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('arrival', [CargoController::class, 'arrival'])->name('cargoes.arrival');
         Route::get('departure', [CargoController::class, 'departure'])->name('cargoes.departure');
         Route::get('terminal', [CargoController::class, 'terminal'])->name('cargoes.terminal');
+        Route::get('history', [CargoController::class, 'history'])->name('cargoes.history');
         Route::get('create', [CargoController::class, 'create'])->name('cargoes.create');
         Route::get('{cargo}/edit', [CargoController::class, 'edit'])->name('cargoes.edit');
         Route::get('search', [CargoController::class, 'search'])->name('cargoes.search');
@@ -44,6 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('store', [CargoController::class, 'departureStore'])->name('cargoes.departure.store');
         });
     });
+    Route::get('clients', [ClientController::class, 'clients'])->name('clients');
 
     Route::group(['middleware' => ['role:admin']], function () {
         Route::resource('users', UserController::class);

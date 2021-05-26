@@ -51,7 +51,7 @@
                                     </button>
 
                                     <a href="{{ route('cargoes.edit', $cargo->id) }}" class="btn btn-success">
-                                        <i class="mdi mdi-tooltip-edit"></i>
+                                        <i class="mdi mdi-message-plus"></i>
                                     </a>
 
                                     <form action="{{ route('cargoes.destroy', $cargo->id)}}" method="POST">

@@ -20,7 +20,7 @@
                                     <td>ID</td>
                                     <td>El.paštas</td>
                                     <td>Rolė</td>
-                                    <td>Registracijos data</td>
+
 
                                 </tr>
                                 </thead>
@@ -30,7 +30,7 @@
                                         <td>{{ $user->id }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->roles[0]->display_name}}</td>
-                                        <td>{{date('Y-m-d', strtotime($user->created_at))}}</td>
+
 
                                         {{--                                <td>--}}
                                         {{--                                      <a href="{{ route('products.edit', $cargo->id) }}" class="btn btn-primary">--}}

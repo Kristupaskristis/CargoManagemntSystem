@@ -20,7 +20,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label class="label">Username</label>
+                            <label class="label">El. paštas</label>
                             <div class="input-group">
                                 <input type="email" name="email" class="form-control" placeholder="El. paštas" required>
 
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="label">Password</label>
+                            <label class="label">Slaptažodis</label>
                             <div class="input-group">
                                 <input type="password" name="password" class="form-control" placeholder="*********" required>
 
@@ -44,12 +44,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary submit-btn btn-block">Login</button>
+                            <button class="btn btn-primary submit-btn btn-block">Prisijungti</button>
                         </div>
                         <div class="form-group d-flex justify-content-between">
                             <div class="form-check form-check-flat mt-0">
                                 <input type="checkbox" class="form-check-input" id="keepSignedIn" checked>
-                                <label class="form-check-label" for="keepSignedIn">Keep me signed in </label>
+                                <label class="form-check-label" for="keepSignedIn">Prisiminti</label>
                             </div>
                         </div>
                     </form>

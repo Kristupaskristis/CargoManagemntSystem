@@ -24,14 +24,16 @@
                 <span class="menu-title">Terminalas</span>
             </a>
         </li>
+        @role('admin')
         <li class="nav-item {{ active_class(['clients']) }}">
             <a class="nav-link" href="{{ url('/clients') }}">
                 <i class="menu-icon mdi mdi-account-group"></i>
                 <span class="menu-title">Klientai</span>
             </a>
         </li>
-        <li class="nav-item {{ active_class(['history']) }}">
-            <a class="nav-link" href="{{ url('/history') }}">
+        @endrole
+        <li class="nav-item {{ active_class(['cargoes/history']) }}">
+            <a class="nav-link" href="{{ url('/cargoes/history') }}">
                 <i class="menu-icon mdi mdi-history"></i>
                 <span class="menu-title">Istorija</span>
             </a>
